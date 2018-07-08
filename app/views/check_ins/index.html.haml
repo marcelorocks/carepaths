@@ -1,0 +1,23 @@
+.container-fluid
+  .row
+    .col-md-3
+    .col-md-6.col-sm-12
+      .card.main-card.content-card
+        %h2 Check Ins
+
+        .content
+          = link_to 'New Daily Check-In', new_check_in_path, class: 'btn btn-success'
+
+        .content
+          %p Response scores range from 0 (Almost Never/False) to 10 (Almost Always/True)
+
+          %table.table.top-50
+            %thead
+              %tr
+                %th Date
+                %th Response
+                %th Comment
+            %tbody
+              = render @check_ins
+
+    .col-md-3

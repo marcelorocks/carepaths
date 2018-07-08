@@ -1,0 +1,36 @@
+.container-fluid
+  .row
+    .col-md-3
+    .col-md-6.col-sm-12
+      .card.main-card.content-card
+        %h2 Assessments
+
+        .content
+          .row
+            .col-4
+              = link_to 'Take New Assessment', new_assessment_path, class: 'btn btn-success'
+            .col-8
+              = select_tag :assessment_type, options_for_select(assessment_types, ''), class: 'form-control'
+
+        .content
+          %p
+            If you have instructions to do a specific measure, select the
+            measure from the drop-down and click Take New Assessment.
+
+          %p
+            Otherwise, you may click Take New Assessment to complete any
+            assessments that have been assigned to you by your clinician. If
+            your clinician hasn't assigned anything, clicking the button will
+            give you a default Adult Assessment. If you have assessments due
+            from your clinician, a green button will appear on your Patient
+            Portal home page (your "dashboard") in the Assessment section.
+
+          %table.table.top-50
+            %thead
+              %tr
+                %th Date
+                %th Resume
+            %tbody
+              = render @assessments
+
+    .col-md-3

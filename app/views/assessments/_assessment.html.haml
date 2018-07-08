@@ -1,0 +1,7 @@
+%tr
+  %td= assessment.created_at.strftime("%B %d, %Y at %H:%M")
+  %td
+    - if assessment.completed?
+      Completed
+    - else
+      = link_to 'Resume', next_assessment_path(assessment), class: 'btn btn-default'

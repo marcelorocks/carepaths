@@ -1,0 +1,13 @@
+.container-fluid
+  .row
+    .col-md-4
+    .col-md-4.col-sm-12
+      .card.main-card
+        %p
+          = @assessment_question.title
+        .content
+          - @assessment_question.assessment_answers.each do |answer|
+            = link_to answer.answer,
+              answer_assessment_question_path(@assessment_question, answer_id: answer.id),
+              class: 'btn btn-success col-12 top-20'
+    .col-md-4

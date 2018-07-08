@@ -1,0 +1,19 @@
+.container-fluid
+  .row
+    .col-md-3
+    .col-md-6.col-sm-12
+      .card.main-card.content-card
+        %h2 Track your progress
+        .content
+          %p This administration includes the following measure(s):
+          %ul
+            %li Patient Health Questionnaire
+            %li Generalized Anxiety Disorder Scale
+            %li CAGE-Adapted to Include Drugs
+        .content
+          .row
+            .col-6
+              = link_to 'Back', 'javascript:back', class: 'btn btn-info form-control'
+            .col-6
+              = link_to 'Next', next_assessment_path(@assessment), class: 'btn btn-success form-control'
+    .col-md-3

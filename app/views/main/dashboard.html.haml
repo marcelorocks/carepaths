@@ -1,0 +1,11 @@
+.container-fluid
+  .row
+    .col-md-4
+    .col-md-4.col-sm-12
+      .card.main-card
+        %h2 Self monitoring
+        .content
+          = link_to 'Assessments', assessments_path, class: 'btn btn-success col-12 top-20'
+          = link_to 'New Check In', new_check_in_path, class: 'btn btn-warning col-12 top-20'
+          = link_to 'Check Ins', check_ins_path, class: 'btn btn-info col-12 top-20'
+    .col-md-4

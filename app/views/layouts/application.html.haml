@@ -1,0 +1,20 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title CarePaths - Software that improves lives
+    = csrf_meta_tags
+    %meta{name: "viewport", content: "width=device-width, initial-scale=1"}
+    = stylesheet_link_tag '//fonts.googleapis.com/css?family=Open+Sans|Quicksand'
+    = stylesheet_link_tag '//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css', media: 'all', integrity: "sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy", crossorigin: "anonymous"
+    = stylesheet_link_tag '//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css'
+    = stylesheet_link_tag    'application', media: 'all'
+
+    = javascript_include_tag '//code.jquery.com/jquery-3.2.1.slim.min.js', integrity: "sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN", crossorigin: "anonymous"
+    = javascript_include_tag '//cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js', integrity: "sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q", crossorigin: "anonymous"
+    = javascript_include_tag '//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js', integrity: "sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4", crossorigin: "anonymous"
+    = javascript_include_tag 'application'
+
+  %body
+    = render 'shared/top_nav'
+    = yield

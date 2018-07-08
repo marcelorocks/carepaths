@@ -1,0 +1,15 @@
+.container-fluid
+  .row
+    .col-md-3
+    .col-md-6.col-sm-12
+      .card.main-card.content-card
+        %h2 New Check In
+
+        .content
+          = form_for @check_in do |f|
+            .form-group
+              = f.label :question, 'Comments'
+              = f.text_area :question, rows: 5, class: 'form-control'
+            .form-group
+              = f.submit 'Save', class: 'btn btn-info'
+    .col-md-3

@@ -1,0 +1,15 @@
+.container-fluid
+  .row
+    .col-md-3
+    .col-md-6.col-sm-12
+      .card.main-card.content-card
+        %h2 Depression Test: PHQ9: Instructions
+        .content
+          %p Over the last 2 weeks, how often have you been bothered by any of the following problems?
+        .content
+          .row
+            .col-6
+              = link_to 'Back', 'javascript:back', class: 'btn btn-info form-control'
+            .col-6
+              = link_to 'Next', next_assessment_path(@assessment), class: 'btn btn-success form-control'
+    .col-md-3
